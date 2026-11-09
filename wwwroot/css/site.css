@@ -1,0 +1,271 @@
+/* Master Page - Instituto Escolar
+   Estilos propios aplicados desde Views/Shared/_Layout.cshtml */
+
+:root {
+    --color-primary: #1f4e79;
+    --color-primary-dark: #163a5a;
+    --color-accent: #f2a900;
+    --color-bg: #f4f6f9;
+    --color-surface: #ffffff;
+    --color-text: #24303f;
+    --color-muted: #6b7a8d;
+    --radius: 8px;
+    --shadow: 0 2px 10px rgba(31, 78, 121, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+.container {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado */
+.site-header {
+    background-color: var(--color-primary);
+    color: #fff;
+    box-shadow: var(--shadow);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    min-height: 72px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius);
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.brand-text strong {
+    font-size: 1.25rem;
+}
+
+.brand-text small {
+    font-size: 0.75rem;
+    color: #cfe0f2;
+}
+
+/* Navegacion */
+.site-nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.site-nav a {
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    color: #eaf2fa;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #fff;
+}
+
+.site-nav a.active {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+}
+
+/* Contenido */
+.site-main {
+    flex: 1;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.page-title {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+    color: var(--color-primary-dark);
+}
+
+.page-lead {
+    margin: 0 0 24px;
+    color: var(--color-muted);
+}
+
+/* Portada */
+.hero {
+    background-color: var(--color-surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 32px;
+    margin-bottom: 28px;
+    border-left: 6px solid var(--color-accent);
+}
+
+.hero h1 {
+    margin: 0 0 12px;
+    font-size: 2rem;
+    color: var(--color-primary-dark);
+}
+
+.hero p {
+    margin: 0 0 20px;
+    color: var(--color-muted);
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 22px;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius);
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Tarjetas */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px;
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+    color: var(--color-primary);
+}
+
+.card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+.card-meta {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Tabla */
+.table-wrapper {
+    overflow-x: auto;
+    background-color: var(--color-surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+}
+
+tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e3e9f0;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Pie de pagina */
+.site-footer {
+    background-color: var(--color-primary-dark);
+    color: #cfe0f2;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 0.85rem;
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+    .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .site-nav a {
+        padding: 8px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+}

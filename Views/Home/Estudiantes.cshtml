@@ -1,0 +1,33 @@
+@model IEnumerable<Escolar.Models.Estudiante>
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Estudiantes";
+}
+
+<h1 class="page-title">Estudiantes</h1>
+<p class="page-lead">Estudiantes matriculados en el curso actual.</p>
+
+<div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Grado</th>
+                <th>Promedio</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var estudiante in Model)
+            {
+                <tr>
+                    <td>@estudiante.Nombre</td>
+                    <td>@estudiante.Grado</td>
+                    <td>@estudiante.Promedio.ToString("0.00", CultureInfo.InvariantCulture)</td>
+                    <td>@estudiante.Estado</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

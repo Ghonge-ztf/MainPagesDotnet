@@ -1,0 +1,19 @@
+@model IEnumerable<Escolar.Models.Materia>
+
+@{
+    ViewData["Title"] = "Materias";
+}
+
+<h1 class="page-title">Materias</h1>
+<p class="page-lead">Plan de estudios del ciclo escolar actual.</p>
+
+<section class="cards">
+    @foreach (var materia in Model)
+    {
+        <article class="card">
+            <h3>@materia.Nombre</h3>
+            <p>Docente: @materia.Docente</p>
+            <span class="card-meta">@materia.HorasSemana horas semanales</span>
+        </article>
+    }
+</section>

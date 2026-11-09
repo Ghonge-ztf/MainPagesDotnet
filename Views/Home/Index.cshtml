@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<section class="hero">
+    <h1>Instituto Escolar</h1>
+    <p>
+        Sistema academico basico para la gestion de estudiantes y materias.
+        Esta pagina usa la Master Page (_Layout.cshtml) con estilos CSS propios.
+    </p>
+    <a class="btn" asp-controller="Home" asp-action="Estudiantes">Ver estudiantes</a>
+</section>
+
+<section class="cards">
+    <article class="card">
+        <h3>Estudiantes</h3>
+        <p>Listado de estudiantes matriculados con su grado y promedio academico.</p>
+        <a class="card-meta" asp-controller="Home" asp-action="Estudiantes">Ir al listado</a>
+    </article>
+    <article class="card">
+        <h3>Materias</h3>
+        <p>Materias impartidas, docente a cargo y horas semanales de cada curso.</p>
+        <a class="card-meta" asp-controller="Home" asp-action="Materias">Ver materias</a>
+    </article>
+    <article class="card">
+        <h3>Matricula</h3>
+        <p>Proceso de admision y calendario academico del curso vigente.</p>
+        <span class="card-meta">Tutorias: lunes a viernes</span>
+    </article>
+</section>

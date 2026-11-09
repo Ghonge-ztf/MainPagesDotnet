@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "V9BY4PJd89w=",
+  "success": true,
+  "projectFilePath": "/home/ghz/Documents/a/programs/dead_bosca/Escolar/Escolar.csproj",
+  "expectedPackageFiles": [
+    "/home/ghz/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.33/microsoft.netcore.app.host.linux-x64.8.0.33.nupkg.sha512"
+  ],
+  "logs": []
+}
